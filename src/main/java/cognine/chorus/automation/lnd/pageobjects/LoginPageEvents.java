@@ -22,7 +22,8 @@ public class LoginPageEvents extends baseClass {
 	By password = By.cssSelector("#i0118");
 	By checkBox = By.xpath("//*[@id='KmsiCheckboxField']");
 	By LnDIcon = By.xpath("//div[@class='ic-title' and contains(text(),'Learning and Development')]");
-	By iFrame=By.id("#undefined");
+	By iFrame = By.id("#undefined");
+	By learningsTitle = By.xpath("//span[@class='px-3']");
 
 	/*
 	 * @FindBy(id="i0116") WebElement email;
@@ -64,15 +65,20 @@ public class LoginPageEvents extends baseClass {
 	public void assertLnDIcon() throws InterruptedException {
 		// Assert.assertEquals(getWebElement(prop.getProperty("LnDIcon"),"xpath").getText(),
 		// "Learning and Development");
-		//getWebElement(prop.getProperty("LnDIcon"),"xpath").click();
+		// getWebElement(prop.getProperty("LnDIcon"),"xpath").click();
 		getWebElementByLocator(LnDIcon).click();
 	}
 
 	public void clickLogo() throws InterruptedException {
 		assertLnDIcon();
-		//switchToIframe(getWebElementByLocator(iFrame));
+		// switchToIframe(getWebElementByLocator(iFrame));
 		driver.switchTo().frame("undefined");
 		System.out.println("Inside the Iframe");
+	}
+
+	public boolean checkLearningsTitle() {
+		boolean result = getWebElementByLocator(learningsTitle).getText().equalsIgnoreCase("My Learnings");
+		return result;
 	}
 
 }

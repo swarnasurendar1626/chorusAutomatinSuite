@@ -25,7 +25,6 @@ public class employeePageTest extends baseClass {
 
 	@Test
 	public void employeeLogin() throws IOException, InterruptedException {
-
 		LoginPageEvents loginPage = new LoginPageEvents(driver);
 		loginPage.login();
 		loginPage.clickLogo();
@@ -35,6 +34,8 @@ public class employeePageTest extends baseClass {
 	public void myLearnings() throws InterruptedException {
 		ep = new myLearningsPage(driver);
 		ep.navigateToMyLearnings();
+		ep.getMyLearningsIcon().click();
+		ep.getSkillsetCard().click();
 		ep.checkSkillsetDetails();
 		ep.checkPracticeDetails();
 		ep.expectedDates();

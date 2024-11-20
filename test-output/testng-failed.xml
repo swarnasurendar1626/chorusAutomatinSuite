@@ -3,14 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="cognine.chorus.automation.lnd.endtoend.skillSetAssignmentTest">
+      <class name="cognine.chorus.automation.lnd.endtoend.employeePageTest">
         <methods>
-          <include name="skillsetStart"/>
-          <include name="closeSkillset"/>
-          <include name="driverQuit"/>
           <include name="driverSetup"/>
+          <include name="myLearnings"/>
         </methods>
-      </class> <!-- cognine.chorus.automation.lnd.endtoend.skillSetAssignmentTest -->
+      </class> <!-- cognine.chorus.automation.lnd.endtoend.employeePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

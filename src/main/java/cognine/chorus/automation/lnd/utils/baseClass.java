@@ -38,9 +38,10 @@ public class baseClass extends driverSetup {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void waitForElementToAppear(WebElement element) {
+	public WebElement waitForElementTobeClickable(By locator) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		wait.until(ExpectedConditions.visibilityOf(element));
+		ele=wait.until(ExpectedConditions.elementToBeClickable(locator));
+		return ele;
 	}
 
 	public static WebElement getWebElement(String identifierValue,String identifierType) {

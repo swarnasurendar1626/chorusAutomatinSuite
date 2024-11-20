@@ -11,7 +11,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
 
@@ -35,9 +34,10 @@ public class myLearningsPage extends baseClass {
 	}
 
 	By myLearningButton = By.className("menu-links");
-	//WebElement learningsIcon = By.xpath("//a[@title='MyLearnings']");
-	@FindBy(xpath = "//a[@title='MyLearnings']")
-	WebElement learningsIcon;
+	By learningsIcon = By.xpath("//a[@title='My Learnings']");
+
+	//@FindBy(xpath = "//a[@title='My Learnings']") WebElement learningsIcon;
+
 	By ongoingButton = By.id("ongoing-button");
 	By plannedButton = By.id("backlog-button");
 	By completedButton = By.id("complete-button");
@@ -66,8 +66,6 @@ public class myLearningsPage extends baseClass {
 
 	public void navigateToMyLearnings() throws InterruptedException {
 		mouseHoverAction(getWebElementByLocator(myLearningButton));
-		getMyLearningsIcon().click();
-		getWebElementByLocator(skillsetCard).click();
 	}
 
 	public void checkSkillsetDetails() {
@@ -93,6 +91,9 @@ public class myLearningsPage extends baseClass {
 
 	public void checkLearningStatus() {
 		softAssert.assertEquals(getWebElementByLocator(learningStatus).getText(), prop.getProperty("learningStatus"));
+	}
+	public void checkLearningsTitle() {
+		softAssert.assertEquals(getWebElementByLocator(learningsTitle).getText(), prop.getProperty("Title"));
 	}
 
 	public void listOfTopics() throws InterruptedException {
@@ -122,7 +123,11 @@ public class myLearningsPage extends baseClass {
 	}
 
 	public WebElement getMyLearningsIcon() {
-		wait.until(ExpectedConditions.elementToBeClickable(learningsIcon));
-		return learningsIcon;
+		WebElement ele =getWebElementByLocator(learningsIcon);
+		return ele;
+	}
+	public WebElement getSkillsetCard() {
+		WebElement ele =waitForElementTobeClickable(skillsetCard);
+		return ele;
 	}
 }

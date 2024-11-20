@@ -9,25 +9,31 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
+import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class ExtentReportListener implements ITestListener, ISuiteListener {
-	public static ExtentReports report;
 	public static ExtentTest logger;
-
-	public ExtentReportListener(String string) {
-		// TODO Auto-generated constructor stub
-	}
+	ExtentReports report = new ExtentReports();
+	ExtentSparkReporter er;
+	ExtentReports getReporter;
 
 	@Override
-	public void onStart(ISuite suite) {
+	public void onStart(ITestContext suite) {
 		// Create an html report for the suite that is executed
-		report = new ExtentReports();
+		String className = suite.getCurrentXmlTest().getClasses().get(0).getName();
+		String reportName = className + System.currentTimeMillis() + ".html";
+		ExtentSparkReporter er = new ExtentSparkReporter("target/" + reportName);
+		er.config().setTheme(Theme.DARK);
+		er.config().setDocumentTitle("Employee Test");
+		report.attachReporter(er);
 	}
 
 	@Override
@@ -44,13 +50,14 @@ public class ExtentReportListener implements ITestListener, ISuiteListener {
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		logger.log(Status.INFO, "Finished executing test");
+		logger.log(Status.PASS, "Finished executing test");
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
+
 		String fileName = String.format("Screenshot-%s.jpg", Calendar.getInstance().getTimeInMillis());
-		Object driver = result.getTestContext().getAttribute("WebDriver"); // use string from setAttribute from BasePage
+		Object driver = result.getTestContext().getAttribute("WebDriver"); // use string fromsetAttribute from BasePage
 		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		File destFile = new File("./screenshots/" + fileName);
 		try {
@@ -59,6 +66,7 @@ public class ExtentReportListener implements ITestListener, ISuiteListener {
 		} catch (IOException e) {
 			System.out.println("Failed to take screenshot");
 		}
+
 		logger.log(Status.FAIL, "Test failed, attaching screenshot in screenshots folder");
 	}
 

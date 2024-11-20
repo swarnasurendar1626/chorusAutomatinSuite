@@ -1,131 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="1" failed="1" skipped="1">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-19T18:42:36 IST" name="Default suite" finished-at="2024-11-19T18:42:55 IST" duration-ms="18282">
+  <suite started-at="2024-11-20T19:18:37 IST" name="Default suite" finished-at="2024-11-20T19:18:52 IST" duration-ms="15160">
     <groups>
     </groups>
-    <test started-at="2024-11-19T18:42:36 IST" name="Default test" finished-at="2024-11-19T18:42:55 IST" duration-ms="18282">
-      <class name="cognine.chorus.automation.lnd.endtoend.skillSetAssignmentTest">
-        <test-method is-config="true" signature="driverSetup()[pri:0, instance:cognine.chorus.automation.lnd.endtoend.skillSetAssignmentTest@2f217633]" started-at="2024-11-19T18:42:36 IST" name="driverSetup" finished-at="2024-11-19T18:42:42 IST" duration-ms="5083" status="PASS">
+    <test started-at="2024-11-20T19:18:37 IST" name="Default test" finished-at="2024-11-20T19:18:52 IST" duration-ms="15160">
+      <class name="cognine.chorus.automation.lnd.endtoend.employeePageTest">
+        <test-method is-config="true" signature="driverSetup()[pri:0, instance:cognine.chorus.automation.lnd.endtoend.employeePageTest@bccb269]" started-at="2024-11-20T19:18:37 IST" name="driverSetup" finished-at="2024-11-20T19:18:42 IST" duration-ms="5067" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverSetup -->
-        <test-method signature="chorusLogin()[pri:0, instance:cognine.chorus.automation.lnd.endtoend.skillSetAssignmentTest@2f217633]" started-at="2024-11-19T18:42:42 IST" name="chorusLogin" finished-at="2024-11-19T18:42:48 IST" duration-ms="6753" status="PASS">
+        <test-method signature="employeeLogin()[pri:0, instance:cognine.chorus.automation.lnd.endtoend.employeePageTest@bccb269]" started-at="2024-11-20T19:18:42 IST" name="employeeLogin" finished-at="2024-11-20T19:18:48 IST" duration-ms="5814" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- chorusLogin -->
-        <test-method signature="skillsetStart()[pri:1, instance:cognine.chorus.automation.lnd.endtoend.skillSetAssignmentTest@2f217633]" started-at="2024-11-19T18:42:48 IST" name="skillsetStart" finished-at="2024-11-19T18:42:54 IST" duration-ms="5784" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">...</button> is not clickable at point (814, 158). Other element would receive the click: <div class="col-sm-12 col-lg-6" id="bandWidthContainer" style="">...</div>
-  (Session info: chrome=131.0.6778.69)
-Build info: version: '4.23.1', revision: '656257d8e9'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a2469599015e460977504cfdeef3588c, clickElement {id=f.DFCA7EF788142B390F08647820E239E7.d.6C1CB816F6DB14442674686A652EE798.e.163}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.69, chrome: {chromedriverVersion: 131.0.6778.69 (77e2244bbcda..., userDataDir: C:\Users\LOHITH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54461}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54461/devtoo..., se:cdpVersion: 131.0.6778.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (a2469599015e460977504cfdeef3588c)] -> xpath: //*[@id='flush-headingOne']/descendant::button[contains(text(),'Practice Skillset')]]
-Session ID: a2469599015e460977504cfdeef3588c]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">...</button> is not clickable at point (814, 158). Other element would receive the click: <div class="col-sm-12 col-lg-6" id="bandWidthContainer" style="">...</div>
-  (Session info: chrome=131.0.6778.69)
-Build info: version: '4.23.1', revision: '656257d8e9'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a2469599015e460977504cfdeef3588c, clickElement {id=f.DFCA7EF788142B390F08647820E239E7.d.6C1CB816F6DB14442674686A652EE798.e.163}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.69, chrome: {chromedriverVersion: 131.0.6778.69 (77e2244bbcda..., userDataDir: C:\Users\LOHITH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54461}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54461/devtoo..., se:cdpVersion: 131.0.6778.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (a2469599015e460977504cfdeef3588c)] -> xpath: //*[@id='flush-headingOne']/descendant::button[contains(text(),'Practice Skillset')]]
-Session ID: a2469599015e460977504cfdeef3588c
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy11.click(Unknown Source)
-at cognine.chorus.automation.lnd.endtoend.skillSetAssignmentTest.skillsetStart(skillSetAssignmentTest.java:57)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+        </test-method> <!-- employeeLogin -->
+        <test-method signature="myLearnings()[pri:0, instance:cognine.chorus.automation.lnd.endtoend.employeePageTest@bccb269]" started-at="2024-11-20T19:18:48 IST" name="myLearnings" finished-at="2024-11-20T19:18:52 IST" duration-ms="4147" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- skillsetStart -->
-        <test-method signature="closeSkillset()[pri:2, instance:cognine.chorus.automation.lnd.endtoend.skillSetAssignmentTest@2f217633]" started-at="2024-11-19T18:42:54 IST" name="closeSkillset" finished-at="2024-11-19T18:42:54 IST" depends-on-methods="cognine.chorus.automation.lnd.endtoend.skillSetAssignmentTest.skillsetStart" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method cognine.chorus.automation.lnd.endtoend.skillSetAssignmentTest.closeSkillset() on instance cognine.chorus.automation.lnd.endtoend.skillSetAssignmentTest@2f217633 depends on not successfully finished methods 
-[cognine.chorus.automation.lnd.endtoend.skillSetAssignmentTest.skillsetStart() on instance cognine.chorus.automation.lnd.endtoend.skillSetAssignmentTest@2f217633]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method cognine.chorus.automation.lnd.endtoend.skillSetAssignmentTest.closeSkillset() on instance cognine.chorus.automation.lnd.endtoend.skillSetAssignmentTest@2f217633 depends on not successfully finished methods 
-[cognine.chorus.automation.lnd.endtoend.skillSetAssignmentTest.skillsetStart() on instance cognine.chorus.automation.lnd.endtoend.skillSetAssignmentTest@2f217633]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeSkillset -->
-        <test-method is-config="true" signature="driverQuit()[pri:0, instance:cognine.chorus.automation.lnd.endtoend.skillSetAssignmentTest@2f217633]" started-at="2024-11-19T18:42:54 IST" name="driverQuit" finished-at="2024-11-19T18:42:55 IST" duration-ms="626" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverQuit -->
-      </class> <!-- cognine.chorus.automation.lnd.endtoend.skillSetAssignmentTest -->
+        </test-method> <!-- myLearnings -->
+      </class> <!-- cognine.chorus.automation.lnd.endtoend.employeePageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

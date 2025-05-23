@@ -5,8 +5,6 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 import java.util.Properties;
-
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,7 +12,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
+import org.testng.Assert;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
@@ -40,11 +38,11 @@ public class baseClass extends driverSetup {
 
 	public WebElement waitForElementTobeClickable(By locator) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		ele=wait.until(ExpectedConditions.elementToBeClickable(locator));
+		ele = wait.until(ExpectedConditions.elementToBeClickable(locator));
 		return ele;
 	}
 
-	public static WebElement getWebElement(String identifierValue,String identifierType) {
+	public static WebElement getWebElement(String identifierValue, String identifierType) {
 
 		System.out.println(identifierType + "" + identifierValue);
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -126,8 +124,7 @@ public class baseClass extends driverSetup {
 		actions.moveToElement(element).perform();
 	}
 
-	public void extentReports ()
-	{
+	public void extentReports() {
 		ExtentReports reports = new ExtentReports();
 
 		ExtentTest test = reports.createTest("LnD Test");

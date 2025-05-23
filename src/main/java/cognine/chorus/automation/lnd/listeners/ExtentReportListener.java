@@ -2,6 +2,9 @@ package cognine.chorus.automation.lnd.listeners;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
 
 import org.apache.commons.io.FileUtils;
@@ -28,8 +31,11 @@ public class ExtentReportListener implements ITestListener, ISuiteListener {
 	@Override
 	public void onStart(ITestContext suite) {
 		// Create an html report for the suite that is executed
+		LocalDateTime datetime=LocalDateTime.now().truncatedTo(ChronoUnit.SECONDS);
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss");
+        String safeFilenameDateTime = datetime.format(formatter);
 		String className = suite.getCurrentXmlTest().getClasses().get(0).getName();
-		String reportName = className + System.currentTimeMillis() + ".html";
+		String reportName = className +"-"+ safeFilenameDateTime.toString() + ".html";
 		ExtentSparkReporter er = new ExtentSparkReporter("target/" + reportName);
 		er.config().setTheme(Theme.DARK);
 		er.config().setDocumentTitle("Employee Test");
@@ -56,16 +62,17 @@ public class ExtentReportListener implements ITestListener, ISuiteListener {
 	@Override
 	public void onTestFailure(ITestResult result) {
 
-		String fileName = String.format("Screenshot-%s.jpg", Calendar.getInstance().getTimeInMillis());
-		Object driver = result.getTestContext().getAttribute("WebDriver"); // use string fromsetAttribute from BasePage
-		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		File destFile = new File("./screenshots/" + fileName);
-		try {
-			FileUtils.copyFile(srcFile, destFile);
-			System.out.println("Screenshot taken, saved in screenshots folder");
-		} catch (IOException e) {
-			System.out.println("Failed to take screenshot");
-		}
+		/*
+		 * String fileName = String.format("Screenshot-%s.jpg",
+		 * Calendar.getInstance().getTimeInMillis()); Object driver =
+		 * result.getTestContext().getAttribute("WebDriver"); // use string
+		 * fromsetAttribute from BasePage File srcFile = ((TakesScreenshot)
+		 * driver).getScreenshotAs(OutputType.FILE); File destFile = new
+		 * File("./screenshots/" + fileName); try { FileUtils.copyFile(srcFile,
+		 * destFile);
+		 * System.out.println("Screenshot taken, saved in screenshots folder"); } catch
+		 * (IOException e) { System.out.println("Failed to take screenshot"); }
+		 */
 
 		logger.log(Status.FAIL, "Test failed, attaching screenshot in screenshots folder");
 	}

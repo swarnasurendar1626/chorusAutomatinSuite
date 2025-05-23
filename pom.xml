@@ -1,6 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="https://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>chorus</groupId>
 	<artifactId>cognine.chorus.automation.lnd</artifactId>
@@ -67,15 +67,9 @@
 			<version>4.23.1</version>
 		</dependency>
 
-
 		<dependency>
-			<groupId>Outlook</groupId>
-			<artifactId>Outlook</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>chorus</groupId>
-			<artifactId>cognine.chorus.automation.pmo</artifactId>
+			<groupId>com.example</groupId>
+			<artifactId>Demo</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>

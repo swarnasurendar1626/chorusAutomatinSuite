@@ -34,7 +34,7 @@ public class myLearningsPage extends baseClass {
 	}
 
 	By myLearningButton = By.className("menu-links");
-	By learningsIcon = By.xpath("//a[@title='My Learnings']");
+	By learningsIcon = By.xpath("//a[@title='Mine']");
 
 	//@FindBy(xpath = "//a[@title='My Learnings']") WebElement learningsIcon;
 

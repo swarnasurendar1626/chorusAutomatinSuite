@@ -72,7 +72,7 @@ public class LoginPageEvents extends baseClass {
 	public void clickLogo() throws InterruptedException {
 		assertLnDIcon();
 		// switchToIframe(getWebElementByLocator(iFrame));
-		driver.switchTo().frame("undefined");
+		driver.switchTo().frame("applicationId");
 		System.out.println("Inside the Iframe");
 	}
 

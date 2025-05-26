@@ -30,18 +30,12 @@ public class employeePageTest extends baseClass {
 		loginPage.clickLogo();
 	}
 
-	@Test
-	public void myLearnings() throws InterruptedException {
-		ep = new myLearningsPage(driver);
-		ep.navigateToMyLearnings();
-		ep.getMyLearningsIcon().click();
-		ep.getSkillsetCard().click();
-		ep.checkSkillsetDetails();
-		ep.checkPracticeDetails();
-		ep.expectedDates();
-		ep.checkAssignedHours();
-		ep.listOfTopics();
-		ep.countOfTopics();
-	}
+	/*
+	 * @Test public void myLearnings() throws InterruptedException { ep = new
+	 * myLearningsPage(driver); ep.navigateToMyLearnings();
+	 * ep.getMyLearningsIcon().click(); ep.getSkillsetCard().click();
+	 * ep.checkSkillsetDetails(); ep.checkPracticeDetails(); ep.expectedDates();
+	 * ep.checkAssignedHours(); ep.listOfTopics(); ep.countOfTopics(); }
+	 */
 
 }

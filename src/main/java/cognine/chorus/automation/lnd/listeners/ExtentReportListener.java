@@ -36,7 +36,7 @@ public class ExtentReportListener implements ITestListener, ISuiteListener {
         String safeFilenameDateTime = datetime.format(formatter);
 		String className = suite.getCurrentXmlTest().getClasses().get(0).getName();
 		String reportName = className +"-"+ safeFilenameDateTime.toString() + ".html";
-		ExtentSparkReporter er = new ExtentSparkReporter("target/" + reportName);
+		ExtentSparkReporter er = new ExtentSparkReporter("test-output/CognineLnD/" + reportName);
 		er.config().setTheme(Theme.DARK);
 		er.config().setDocumentTitle("Employee Test");
 		report.attachReporter(er);

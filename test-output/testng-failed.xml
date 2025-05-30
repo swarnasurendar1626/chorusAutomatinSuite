@@ -6,7 +6,7 @@
       <class name="cognine.chorus.automation.lnd.endtoend.employeePageTest">
         <methods>
           <include name="driverSetup"/>
-          <include name="myLearnings"/>
+          <include name="employeeLogin"/>
         </methods>
       </class> <!-- cognine.chorus.automation.lnd.endtoend.employeePageTest -->
     </classes>
